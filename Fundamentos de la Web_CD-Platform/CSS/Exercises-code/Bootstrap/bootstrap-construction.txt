@@ -1,0 +1,59 @@
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col"></div>
+        <div class="col"></div>
+    </div>
+</div>
+
+
+Esto producirá 3 columnas iguales en la página (4+4+4 = 12). 
+Si agregamos más clases Bootstrap al código, podríamos ver un resultado como el siguiente:
+
+<div class="container text-center">
+    <div class="row">
+        <div class="col bg-secondary text-light m-2">One</div>
+        <div class="col bg-secondary text-light m-2">Two</div>
+        <div class="col bg-secondary text-light m-2">Three</div>
+    </div>
+</div>
+
+
+Las columnas también se pueden anidar dentro de otras columnas. 
+En este ejemplo vamos a anidar 3 columnas iguales dentro de su columna principal.
+
+
+<div class="container text-center">
+    <div class="row">
+        <div class="col bg-secondary text-light m-2">One</div>
+        <div class="col bg-secondary text-light m-2">Two
+            <div class="row">
+                <div class="col bg-info text-light m-2">A</div>
+                <div class="col bg-info text-light m-2">B</div>
+                <div class="col bg-info text-light m-2">C</div>
+            </div>
+        </div>
+        <div class="col bg-secondary text-light m-2">Three</div>
+    </div>
+</div>
+
+Incluso podemos establecer el ancho de la columna y compensarlo en el diseño. 
+El siguiente ejemplo centrará la columna en la página y tendrá por un ancho predeterminado de 6 de las columnas disponibles.
+
+
+<div class="container border border-dark">
+    <div class="row">
+        <div class="col-6 offset-3 bg-secondary text-light">Center column, half of the viewport width</div>
+    </div>
+</div>
+
+
+links utiles:
+
+Clases muy útiles para los diseños
+
+Contenedores - https://getbootstrap.com/docs/4.4/layout/overview/ - (solo aprenda sobre la clase container y omita el resto)
+Sistema de Cuadrícula - https://getbootstrap.com/docs/4.4/layout/grid/ - (para posicionar y dimensionar las columnas):
+Esquema de Color - https://getbootstrap.com/docs/4.4/utilities/colors/ - (útil para ver como están quedando las columnas)
+Espaciados - https://getbootstrap.com/docs/4.4/utilities/spacing/ - (margenes y espaciados)
+Dimensiones - https://getbootstrap.com/docs/4.4/utilities/sizing/ - (alto y ancho de los elementos)

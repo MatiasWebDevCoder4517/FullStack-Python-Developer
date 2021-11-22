@@ -1,0 +1,112 @@
+/*CSS reset settings here*/
+*{
+ margin: 0px;
+ padding: 0px;
+}
+
+#wrapper{
+ width: 75%;
+ background-color: silver;
+ margin: 0px auto;
+ overflow: hidden;
+ height: auto;
+ display: block;
+}
+
+#header{
+ height: 150px;
+ background-color: green;
+ margin: 15px;
+ display: block;
+}
+
+.clear{
+  clear:both;
+}
+
+#navigation{
+ height: 300px;
+ width: 20%;
+ background-color: blue;
+ margin-left: 15px;
+ float: left;
+ display: block;
+}
+
+#main_content{
+ height: 75%;
+ width: 75%;
+ background-color: red;
+ float: right;
+ margin: 0 15px 20px;
+ display: inline-block;
+
+}
+
+.subcontents{
+ height: 200px;
+ width: 210px;
+ background-color: yellow;
+ margin: 10px 10px 30px;
+ float: left;
+ display: block;
+}
+
+#advertisement{
+ height: 120px;
+ width: 90%;
+ background-color: purple;
+ margin: 10px;
+ display: block;
+}
+
+/*****  Media Queries for Desktops *****/ 
+
+@media screen and (max-width: 1246px){
+	#navigation{
+	 height: 30px;
+	 width: 15%;
+	 background-color: blue;
+	 margin-left: 15px;
+	 float: left;
+	 display: block;
+	}
+	.subcontents{
+		 height: 200px;
+		 width: 40%;
+		 background-color: yellow;
+		 margin: 10px 10px 30px;
+		 float: left;
+		 display: block;
+	}
+}
+/*****  Media Queries for Tablets & Handheld Devices *****/ 
+
+@media screen and (max-width: 830px){
+	#main_content{
+	 height: 75%;
+	 width: 82%;
+	 background-color: red;
+	 float: right;
+	 margin: 0 15px 20px;
+	 display: inline-block;
+
+	}
+	#navigation{
+	 height: 30px;
+	 width: 30px;
+	 background-color: blue;
+	 margin-left: 15px;
+	 float: left;
+	 display: block;
+	}
+	.subcontents{
+		 height: 200px;
+		 width: 80%;
+		 background-color: yellow;
+		 margin: 10px 10px 30px;
+		 float: left;
+		 display: block;
+	}
+
+}

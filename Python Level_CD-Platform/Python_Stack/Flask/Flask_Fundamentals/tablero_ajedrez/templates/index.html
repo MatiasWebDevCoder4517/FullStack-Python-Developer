@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chess-Table_ Flask</title>
+    
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/style.css')}}"            
+    />
+    
+    <script
+      src="{{url_for('static', filename='js/script.js') }}"
+    ></script>  
+
+    <!-- <style>
+    #container1{
+      text-align: center;
+      background-color: lightcyan;
+    }
+    .box1 {
+        background-color: black;
+        width: 90px;
+        height: 90px;
+    }
+    .box2 {
+        background-color: white; 
+        width: 90px;
+        height: 90px;
+    }
+    .chessboard {
+        text-align: center;
+        margin: 30px auto;
+    } 
+    </style>  -->
+  </head>
+  <body>
+    <h1>Welcome to the ChessGame Mortal</h1>
+
+    <div id="container1">
+      <table class="chessboard">
+      {% for i in range(x): %}
+          <tr>
+              {% for j in range(y): %}
+              <td class="box{{ (i+j)%2+1 }}"></th>
+              {% endfor %}
+          </tr>
+      {% endfor %}
+      </table>
+    </div>
+    
+  </body>
+</html>

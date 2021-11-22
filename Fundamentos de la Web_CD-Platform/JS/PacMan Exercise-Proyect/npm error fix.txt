@@ -1,0 +1,12 @@
+** JUST UPDATE EVERYTHING RELATED TO NODEJS AND NPM MODULES, ON YOUR COMPUTER **
+** ASSUME THAT YOU HAVE INSTALLED LATEST NODEJS FRAMEWORK **
+
+TYPE FOLLOWING COMMANDS: 
+
+npm install node@latest -g
+npm install babel-upgrade -g
+npm audit fix --force
+npm install
+npm start
+
+ENJOY!

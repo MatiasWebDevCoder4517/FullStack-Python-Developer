@@ -1,0 +1,43 @@
+{% extends "layout.html" %} {% block body %}
+
+<div class="row">
+  <div class="col-md-4 offset-md-4">
+    <div class="card card-body">
+      <form action="/update/{{email.0}}" method="POST">
+        <div class="form-group">
+          <input
+            type="text"
+            name="email"
+            value="{{email.1}}"
+            class="form-control"
+          />
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary btn-block">
+            <p>Update Email</p>
+          </button>
+        </div>
+        
+      </form>
+    </div>
+    {% with errors = get_flashed_messages(category_filter=["email"]) %}
+    {% if errors %}
+    {% for msg in errors %}
+    <div id="error">
+        <h1 id="errormsg">Email is not valid!<h1>
+    </div>
+    <h4>{{ msg }}</h4>
+    {% endfor %}
+    {% endif %} 
+    {% endwith %}
+  </div>
+</div>
+
+{% endblock %}
+
+
+
+
+
+
+

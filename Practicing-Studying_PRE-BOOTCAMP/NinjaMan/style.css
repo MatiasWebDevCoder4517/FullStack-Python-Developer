@@ -1,0 +1,82 @@
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  width: 560px;
+  height: 560px;
+  border: solid black;
+}
+
+.grid div {
+  width: 20px;
+  height: 20px;
+}
+
+.sushi {
+  /*background-color: green;   
+    border: 5px solid white;
+    box-sizing: border-box;
+    */
+  background-color: black;
+  height: 50px;
+  width: 50px;
+  /*display: inline-block;*/
+  background-image: url("sushi.png");
+  background-size: contain;
+}
+
+.wall {
+  background-color: blue;
+}
+
+.onigiri {
+  /*background-color: green;
+  border-radius: 10px;
+  */
+  background-color: black;
+  height: 60px;
+  width: 60px;
+  /*display: inline-block;*/
+  background-image: url("onigiri.png");
+  background-size: contain;
+}
+
+.red {
+  background-color: red;
+  background-image: url("red.gif");
+  background-size: contain;
+}
+
+.pinky {
+  background-color: pink;
+  background-image: url("pinky.gif");
+  background-size: contain;
+}
+
+.bluey {
+  background-color: darkblue;
+  background-image: url("bluey.gif");
+  background-size: contain;
+}
+
+.pumpky {
+  background-color: orange;
+  background-image: url("pumpky.gif");
+  background-size: contain;
+}
+
+.ninja {
+  /*background-color: yellow;
+  border-radius: 10px;
+  */
+  background-color: black;
+  height: 50px;
+  width: 50px;
+  background-image: url("ninja.gif");
+  background-size: contain;
+}
+
+.scared-ghost {
+  background-color: aquamarine;
+  background-image: url("scaredy.png");
+  background-size: contain;
+}

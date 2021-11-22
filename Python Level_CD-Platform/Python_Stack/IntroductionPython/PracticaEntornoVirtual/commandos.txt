@@ -1,0 +1,41 @@
+-pip list: 
+
+The pip list command returns the list of packages in the current environment.
+
+-deactivate: 
+
+make inactive the actual enviroment that you are recently using.
+
+-pip3 list: 
+
+Same of pip list. But displays all the installed packages with version Python3 and above. 
+
+-source myEnvironments/py3Env/bin/activate (Linux):
+-source myEnvironments/py3Env/Scripts/activate (Windows/gitBash): 
+
+activate the selected enviroment. 
+
+-pip install Django==1.11.9:
+
+install inside the enviroment the virtual package Django on version 1.11.9.
+
+-pip freeze:
+
+freeze all the packages and their versions. This command is useful attached to a document to know the right working enviroment path for future projects. 
+
+-requirements.txt:
+
+useful document using pip freeze command, you 'freeze' all the packages with their versions to future projects.
+
+-pip uninstall Django:
+
+Erase all the components and files of Django package on the enviroment. 
+
+-pip show Django:
+
+make list of all components and files attached to the package Django. 
+
+-pip search Flask:
+
+Looking on the official documentation of Flask framework package.
+

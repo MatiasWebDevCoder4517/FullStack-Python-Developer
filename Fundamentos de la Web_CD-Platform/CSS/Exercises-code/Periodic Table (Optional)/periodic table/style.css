@@ -1,0 +1,140 @@
+:root {
+    --width: 100vw;
+    --height: 100vh;
+    --boxWidth: calc(var(--width)/19);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#periodic-table-container {
+    height: var(--height);
+    width: var(--width);
+    position: relative;
+}
+
+.spacer-box {
+    width: var(--boxWidth);
+    height: calc(var(--height)/11);
+}
+
+.box {
+    width: var(--boxWidth);
+    height: calc(var(--height)/11);
+    /* border: 1px solid #000; */
+    border: 3px solid #fff;
+    /* box-shadow: 1px 2px 3px #000;; */
+    text-align: center;
+}
+
+.red-text {
+    color: red;
+}
+
+/* .label-numbers{color: rgb(201, 68, 68);} */
+.blue {
+    background: rgb(77, 77, 181)
+}
+
+.pink {
+    background: pink;
+}
+
+.yellow {
+    background: rgb(192, 192, 0)
+}
+
+.green {
+    background: green
+}
+
+ul {
+    list-style: none;
+    font-size: 2vh;
+}
+
+.upper-content {
+    display: flex;
+    flex-direction: row;
+}
+
+.upper-numbers {
+    display: flex;
+    flex-direction: row;
+}
+
+.upper-numbers li:nth-child(1) {
+    padding: 1vw;
+}
+
+.periodic-table-bottom {
+    padding: 10px 0 0 var(--boxWidth);
+}
+
+.periodic-table-bottom div {
+    display: flex;
+    flex-direction: row;
+}
+
+.periodic-table-bottom div ul:nth-child(1) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: calc(var(--boxWidth) * 2);
+}
+
+.periodic-table-bottom div ul:nth-child(1) li:nth-child(2) {
+    padding-left: 25%;
+}
+
+.bottom-elements-list {
+    display: flex;
+    flex-direction: row;
+}
+
+/******************** ADDITIONAL STUFF */
+.fa-sun {
+    color: orange;
+}
+
+
+
+/* click me button */
+#mode-btn {
+    position: absolute;
+    left: 40%;
+    top: 20%;
+    padding: 1vw 2vw;
+    font-size: 1.3em;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: none;
+    /* background: rgb(243, 243, 243); */
+    cursor: pointer;
+}
+
+.pink:hover {
+    background: #fe019a;
+    transition: all .25s ease-in;
+    color: #fff;
+}
+
+.yellow:hover {
+    background: #f0f725;
+    transition: all .25s ease-in;
+    /* color: #fff; */
+}
+
+.green:hover {
+    background: #A7FF19;
+    transition: all .25s ease-in;
+}
+
+.blue:hover {
+    background: blue;
+    transition: all .25s ease-in;
+}

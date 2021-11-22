@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML-FORM-DOJO Flask</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/style.css')}}"
+    />
+  </head>
+  <body>
+    <h1 class="title">Welcome to the FORM MANAGEMENT-DOJO</h1>
+    <br />
+
+    <div class="container">
+      <form class="form1" action="/clients" method="POST">
+        <div class="form-group">
+          <label for="name"
+            >Your Name:
+            <input
+              name="name"
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder=""
+          /></label>
+        </div>
+
+        <div class="form-group">
+          <label for="dojo"
+            >Dojo Location:
+            <select name="dojo" class="form-control" id="dojo_location">
+              <option selected>Select Dojo Location</option>
+              <option>San Francisco</option>
+              <option>Edinburgh</option>
+              <option>Oslo</option>
+            </select></label
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="fav_language"
+            >Favorite Language:
+            <select name="language" class="form-control" id="fav_language">
+              <option selected>Select Favorite Language</option>
+              <option>Python</option>
+              <option>JavaScript</option>
+              <option>Java</option>
+            </select></label
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="comment_area">Comment (Optional): </label>
+          <textarea
+            name="comment"
+            class="form-control"
+            id="comment_area"
+            rows="4"
+          >
+          </textarea>
+        </div>
+
+        <input
+          class="float-right btn-success btn-lg"
+          type="submit"
+          value="Save Client"
+        />
+      </form>
+    </div>
+  </body>
+</html>

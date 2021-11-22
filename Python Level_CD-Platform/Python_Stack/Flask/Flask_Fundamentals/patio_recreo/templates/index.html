@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patio Recreo - Flask</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      .container1 {
+        background: red;
+        display: inline-block;
+        width: 200px;
+        height: 100px;
+        padding: 100px;
+        text-align: center;
+        margin: 20px;
+        /*background-color: color;*/
+        border: 1px solid black;
+        margin: 10px;
+      }
+
+      .container2 {
+        background: yellow;
+        display: inline-block;
+        width: 200px;
+        height: 100px;
+        padding: 100px;
+        text-align: center;
+        margin: 20px;
+        /*background-color: color;*/
+        border: 1px solid black;
+        margin: 10px;
+      }
+
+      .container3 {
+        background: lightblue;
+        display: inline-block;
+        width: 200px;
+        height: 100px;
+        padding: 100px;
+        text-align: center;
+        margin: 20px;
+        /*background: color;*/
+        border: 1px solid black;
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
+        LEVEL 1
+        <div class="container1">
+      <h1>ANGER</h1>
+    </div>
+    <div class="container2">
+      <h1>VENGEANCE</h1>
+    </div>
+    <div class="container3">
+      <h1>FEAR</h1>
+    </div> -->
+
+    <!-- LEVEL 2 -->
+    {% for i in range(0,x): %}
+    <div class="container1">
+      <h1>ANGER</h1>
+    </div>
+    {% endfor %} {% for i in range(0,x): %}
+    <div class="container2">
+      <h1>VENGEANCE</h1>
+    </div>
+    {% endfor %} {% for i in range(0,x): %}
+    <div class="container3">
+      <h1>FEAR</h1>
+    </div>
+    {% endfor %}
+
+    <!-- 
+        LEVEL 3
+        {% for i in range(0,x): %}
+    <div class="container1">
+      <h1>ANGER</h1>
+    </div>
+    {% endfor %} {% for i in range(0,x): %}
+    <div class="container2">
+      <h1>VENGEANCE</h1>
+    </div>
+    {% endfor %} {% for i in range(0,x): %}
+    <div class="container3">
+      <h1>FEAR</h1>
+    </div>
+    {% endfor %}
+     -->
+  </body>
+</html>

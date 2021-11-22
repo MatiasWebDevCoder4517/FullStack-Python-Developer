@@ -1,0 +1,65 @@
+{% extends "layout.html" %} {% block body %}
+
+<div class="row">
+  <div class="col-md-5">
+    {% with messages = get_flashed_messages() %} {% if messages %} {% for
+    message in messages %}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      {{ message }}
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% endfor %} {% endif %} {% endwith %}
+
+    <div class="card card-body">
+      <form action="{{url_for('add_student')}}" method="POST">
+        <div class="form-group">
+          <input type="text" class="form-control" name="firstname" placeholder="Student First Name" />
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" name="lastname" placeholder="Student Last Name" />
+        </div>
+        <div class="form-group">
+          <input type="text" class="form-control" name="year" placeholder="Student Year" />
+        </div>
+        <br />
+        <button class="btn btn-primary btn-block">Save Student</button>
+      </form>
+      <a href="/go_grade" class="btn btn-success">Add Course Guide</a>
+    </div>
+  </div>
+
+  <div class="col-md-7">
+    <table class="table table-striped table-hover table-bordered table-sm bg-white">
+      <thead>
+        <tr>
+          <td>ID</td>
+          <td>First Name</td>
+          <td>Last Name</td>
+          <td>Year</td>
+          <td>Created</td>
+          <td>Updated</td>
+          <td>Student Operations</td>
+        </tr>
+      </thead>
+      <tbody>
+        {% for student in students %}
+        <tr>
+          {%for i in student %}
+          <td>{{ i }}</td>
+
+          {%endfor%}
+          <td>
+            <a href="/edit/{{student.0}}" class="btn btn-info">Update Student</a>
+            <a href="/delete/{{student.0}}" class="btn btn-danger btn-delete">Delete Student</a>
+            <a href="/go_report" class="btn btn-warning">Report Card</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+{% endblock %}

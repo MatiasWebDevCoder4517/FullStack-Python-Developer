@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebFundamentals - Exercise_FormRegister</title>
+  </head>
+  <body>
+    <div class="container1">
+      <h1 align="center">MI FORMULARIO DE REGISTRO</h1>
+      <br />
+      <br />
+      <div align="center" class="container2">
+        <div>
+          <label for="nombre">Nombre: </label>
+          <input type="text" id="nombre" name="nombre" />
+        </div>
+        <br />
+        <div>
+          <label for="apellido">Apellido: </label>
+          <input type="text" id="apellido" name="apellido" />
+        </div>
+
+        <br />
+        <div>
+          <label for="email">Email: </label>
+          <input type="text" id="email" name="email" />
+        </div>
+        <br />
+        <div>
+          <label for="password">Contraseña: </label>
+          <input type="password" id="password" name="password" />
+        </div>
+        <br />
+        <div>
+          <label for="password">Confirmar: </label>
+          <input type="password" id="password" name="password" />
+        </div>
+        <br />
+        <div>
+          <label for="date">Cumpleaños: </label>
+          <input type="date" id="date" name="date" />
+        </div>
+        <br />
+        <div>
+          <label for="masculino">Hombre </label>
+          <input type="radio" id="masculino" name="genero" value="masculino" />
+          <label for="femenino">Mujer </label>
+          <input type="radio" id="femenino" name="genero" value="femenino" />
+          <label for="otro">Otro </label>
+          <input type="radio" id="otro" name="genero" value="otro" />
+        </div>
+        <br />
+        <div>
+          <h2>UNA BREVE DESCRIPCION DE TI:</h2>
+          <br />
+          <textarea name="descripcion" rows="10" cols="50"></textarea>
+        </div>
+        <br />
+        <div>
+          <h2>Lenguaje Favorito:</h2>
+          <select name="lenguaje">
+            <option value="seleccionar">Seleccionar Lenguaje</option>
+            <option value="js">JavaScript</option>
+            <option value="python">Python</option>
+            <option value="c#">C#</option>
+            <option value="c++">C++</option>
+          </select>
+        </div>
+        <br />
+        <div>
+          <input type="submit" value="Enviar" />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* HEADER STYLING */
+.header{
+    height: 300px;
+    background: red;
+}
+.header img{
+    height: 60px;
+    width: 60%;
+    padding-top: 5%;
+    padding-left: 20%;
+}
+#header-options-wrp{
+    /* background: cyan; */
+    color: #fff;
+    padding-left: 10%;
+    padding-top: 8%;
+    padding-bottom: 5%;
+    text-transform: capitalize;
+    font-size: 1.2rem;
+    list-style: none;
+}
+#header-options-wrp li:nth-child(1){
+    font-weight: bold;
+}
+
+/* ISSUES LINK */
+#issues-link{
+    background: gray;
+
+}
+#profile-belt-info-wrp{
+    background: darkcyan;
+    height: 300px;
+
+}
+#tracks-label-continue-wrp{
+    height: 30px;
+    background: green;
+}
+#tracks-list-wrp{
+    background: purple;
+    height: 400px;
+}

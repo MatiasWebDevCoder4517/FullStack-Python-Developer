@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>NinjaMan</title>
+    <style type="text/css">
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      /*
+      .row {
+        line-height: 0;
+      }
+      */
+
+      .wall {
+        background-color: blue;
+        margin: 50px;
+        padding: 50px;
+        background-image: url("wall.png");
+        display: inline-block;
+      }
+
+      .sushi {
+        background-color: black;
+        height: 50px;
+        width: 50px;
+        display: inline-block;
+        background-image: url("sushi.png");
+        background-size: contain;
+      }
+
+      /*.blank {
+        background-color: lightblue;
+        height: 40px;
+        width: 40px;
+        display: inline-block;
+      }
+      */
+
+      .ground {
+        width: 50px;
+        height: 50px;
+        background-image: url("bg.png");
+        display: inline-block;
+      }
+      .ghost {
+        width: 50px;
+        height: 50px;
+        background-image: url("ghost1.png");
+        display: inline-block;
+      }
+      #ninjaman {
+        background-color: black;
+        height: 50px;
+        width: 50px;
+        display: inline-block;
+        background-image: url("ninja.gif");
+        background-size: contain;
+        position: absolute;
+      }
+      div {
+        line-height: 0px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="world"></div>
+    <div id="ninjaman"></div>
+  </body>
+
+  <script type="text/javascript">
+    var ninjaman = {
+      x: 6,
+      y: 4,
+    };
+    var world = [
+      [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+      [1, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 1],
+      [1, 2, 1, 1, 1, 2, 1, 2, 1, 1, 1, 2, 1],
+      [1, 2, 1, 2, 2, 2, 2, 2, 2, 2, 1, 2, 1],
+      [1, 2, 2, 2, 1, 1, 5, 1, 1, 2, 2, 2, 1],
+      [1, 2, 1, 2, 2, 2, 2, 2, 2, 2, 1, 2, 1],
+      [1, 2, 1, 1, 2, 2, 1, 2, 2, 1, 1, 2, 1],
+      [1, 2, 2, 2, 2, 2, 1, 2, 2, 2, 2, 2, 1],
+      [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+    ];
+
+    var worldDict = {
+      0: "ground",
+      1: "wall",
+      2: "sushi",
+    };
+
+    function drawWorld() {
+      output = "";
+
+      for (var row = 0; row < world.length; row++) {
+        output += "<div class='row'></div>";
+        for (var x = 0; x < world[row].length; x++) {
+          output += "<div class='" + worldDict[world[row][x]] + "'></div>";
+        }
+        output += "</div>";
+      }
+      document.getElementById("world").innerHTML = output;
+    }
+
+    /*
+    var el = document.getElementById("world");
+    function drawWorld() {
+      el.innerHTML = "";
+      for (var y = 0; y < world.length; y = y + 1) {
+        for (var x = 0; x < world[y].length; x = x + 1) {
+          if (world[y][x] === 1) {
+            el.innerHTML += "<div class='wall'></div>";
+          } else if (world[y][x] === 2) {
+            el.innerHTML += "<div class='sushi'></div>";
+          } else if (world[y][x] === 3) {
+            el.innerHTML += "<div class='ground'></div>";
+          } else if (world[y][x] === 4) {
+            el.innerHTML += "<div class='ghost'></div>";
+          } else if (world[y][x] === 5) {
+            el.innerHTML += "<div class='ninja'></div>";
+          }
+        }
+        el.innerHTML += "<br>";
+      }
+    }
+    */
+    drawWorld();
+
+    function drawNinjaman() {
+      document.getElementById("ninjaman").style.top = ninjaman.y * 40 + "px";
+      document.getElementById("ninjaman").style.left = ninjaman.x * 40 + "px";
+    }
+    drawNinjaman();
+
+    document.onkeydown = function (e) {
+      if (e.keyCode == 37) {
+        if (world[ninjaman.y][ninjaman.x - 1] != 1) {
+          ninjaman.x--;
+        }
+      }
+      if (e.keyCode == 39) {
+        if (world[ninjaman.y][ninjaman.x + 1] != 1) {
+          ninjaman.x++;
+        }
+      }
+      if (e.keyCode == 40) {
+        if (world[ninjaman.y + 1][ninjaman.x] != 1) {
+          ninjaman.y++;
+        }
+      }
+      world[ninjaman.y][ninjaman.x] = 0;
+      drawWorld();
+      drawNinjaman();
+    };
+
+    /*
+    document.onkeydown = function (event) {
+      // console.log(event);
+      if (event.keyCode === 37) {
+        // ninja MOVE LEFT
+        if (world[ninjaman.y][ninjaman.x - 1] !== 1) {
+          world[ninjaman.y][ninjaman.x] = 3;
+          ninjaman.x = ninjaman.x - 1;
+          world[ninjaman.y][ninjaman.x] = 5;
+          drawWorld();
+        }
+      } else if (event.keyCode === 38) {
+        // ninja MOVE UP
+        if (world[ninjaman.y - 1][ninjaman.x] !== 1) {
+          world[ninjaman.y][ninjaman.x] = 3;
+          ninjaman.y = ninjaman.y - 1;
+          world[ninjaman.y][ninjaman.x] = 5;
+          drawWorld();
+        }
+      } else if (event.keyCode === 39) {
+        // ninja MOVE RIGHT
+        if (world[ninjaman.y][ninjaman.x + 1] !== 1) {
+          world[ninjaman.y][ninjaman.x] = 3;
+          ninjaman.x = ninjaman.x + 1;
+          world[ninjaman.y][ninjaman.x] = 5;
+          drawWorld();
+        }
+      } else if (event.keyCode === 40) {
+        // ninja MOVE DOWN
+        if (world[ninjaman.y + 1][ninjaman.x] !== 1) {
+          world[ninjaman.y][ninjaman.x] = 3;
+          ninjaman.y = ninjaman.y + 1;
+          world[ninjaman.y][ninjaman.x] = 5;
+          drawWorld();
+        }
+      }
+      console.log(world);
+    };
+    */
+  </script>
+</html>

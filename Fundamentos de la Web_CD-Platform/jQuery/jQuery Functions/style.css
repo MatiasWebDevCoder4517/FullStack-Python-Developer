@@ -1,0 +1,12 @@
+hr {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    width: auto;
+    height: 5px;
+    background: black;
+}
+
+.changed-class {
+    color: red;
+    background: black;
+}

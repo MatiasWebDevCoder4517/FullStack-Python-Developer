@@ -1,0 +1,35 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+Ten en cuenta el flujo básico de utilizar jQuery:
+
+Selecciona el elemento, clase o id utilizando el selector jQuery. 
+Agrega un event listener: ¿Cómo quieres que este evento sea activado?
+Escribe el código sobre lo que quieres que suceda cuando el evento sea activado
+
+Lista de funciones con las que deberías familiarizarte:
+
+Efectos (funciones para hacer algunos efectos de animación geniales) 
+.hide()
+.show()
+.toggle()
+.slideUp() - no disponible en la versión slim
+.slideDown() - no disponible en la versión slim
+.slideToggle() - no disponible en la versión slim
+.fadeOut() - no disponible en la versión slim
+.fadeIn() - no disponible en la versión slim
+CSS (agregar o quitar una clase para cualquier elemento/DOM de HTML)
+.addClass()
+.removeClass()
+.css()
+Manipulación (recuperar o configurar un valor o texto en cualquier elemento de HTML) 
+.after()
+.append()
+.prepend()
+.attr()
+.before()
+.html()
+.text()
+.val()
+Eventos (funciones para manejar un evento)
+.click()
+.hover()

@@ -1,0 +1,100 @@
+npm WARN old lockfile
+npm WARN old lockfile The package-lock.json file was created with an old version of npm,
+npm WARN old lockfile so supplemental metadata must be fetched from the registry.       
+npm WARN old lockfile 
+npm WARN old lockfile This is a one-time fix-up, please be patient...
+npm WARN old lockfile 
+npm WARN deprecated request-promise-native@1.0.9: request-promise-native has been deprecated because it extends the now deprecated request package, see https://github.com/request/request/issues/3142       
+npm WARN deprecated urix@0.1.0: Please see https://github.com/lydell/urix#deprecated
+npm WARN deprecated har-validator@5.1.5: this library is no longer supported
+npm WARN deprecated resolve-url@0.2.1: https://github.com/lydell/resolve-url#deprecated
+npm WARN deprecated debug@4.1.1: Debug versions >=3.2.0 <3.2.7 || >=4 <4.3.1 have a low-severity ReDos regression when used in a Node.js environment. It is recommended you upgrade to 3.2.7 or 4.3.1. (https://github.com/visionmedia/debug/issues/797)
+npm WARN deprecated chokidar@2.1.8: Chokidar 2 will break on node v14+. Upgrade to chokidar 3 with 15x less dependencies.
+npm WARN deprecated querystring@0.2.0: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
+npm WARN deprecated uuid@3.4.0: Please upgrade  to version 7 or higher.  Older versions may use Math.random() in certain circumstances, which is known to be problematic.  See https://v8.dev/blog/math-random for details.
+npm WARN deprecated request@2.88.2: request has been deprecated, see https://github.com/request/request/issues/3142
+npm WARN deprecated svgo@1.3.2: This SVGO version is no longer supported. Upgrade to v2.x.x.
+npm WARN deprecated parcel-bundler@1.12.4: Parcel v1 is no longer maintained. Please migrate to v2, which is published under the 'parcel' package. See https://v2.parceljs.org/getting-started/migration for 
+details.
+npm WARN deprecated core-js@2.6.11: core-js@<3.3 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Please, upgrade your dependencies to the actual version of core-js.
+npm ERR! code 1
+npm ERR! path C:\Users\Matias\Desktop\CODING-DOJO\WebFundamentals Level\Fundamentos de la Web_CD-Platform\JS\PacMan Exercise-Proyect\youtube solution\vanilla-js-pacman-master\js-pacman-START-HERE\node_modules\deasync
+npm ERR! command failed
+npm ERR! command C:\WINDOWS\system32\cmd.exe /d /s /c node ./build.js
+npm ERR! Building the projects in this solution one at a time. To enable parallel build, please add the "-m" switch.
+npm ERR!   deasync.cc
+npm ERR!   win_delay_load_hook.cc
+npm ERR!      Creando biblioteca C:\Users\Matias\Desktop\CODING-DOJO\WebFundamentals Level\Fundamentos de la Web_CD-Platform\JS\PacMan Exercise-Proyect\youtube solution\vanilla-js-pacman-master\js-pacman-START-HERE\node_modules\deasync\build\Release\deasync.lib y objeto C:\Users\Matias\Desktop\CODING-DOJO\WebFundamentals Level\Fundamentos de la Web_CD-Platform\JS\PacMan Exercise-Proyect\youtube solution\vanilla-js-pacman-master\js-pacman-START-HERE\node_modules\deasync\build\Release\deasync.exp
+npm ERR!   Generando c�digo
+npm ERR!   Previous IPDB not found, fall back to full compilation.
+npm ERR!   All 154 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+npm ERR!   Generaci�n de c�digo finalizada
+npm ERR! FileTracker : error FTK1011: could not create the new file tracking log file: C:\Users\Matias\Desktop\CODING-DOJO\WebFundamentals Level\Fundamentos de la Web_CD-Platform\JS\PacMan Exercise-Proyect\youtube solution\vanilla-js-pacman-master\js-pacman-START-HERE\node_modules\deasync\build\Release\obj\deasync\deasync.tlog\link-rc.read.1.tlog. The system cannot find the path specified. [C:\Users\Matias\Desktop\CODING-DOJO\WebFundamentals Level\Fundamentos de la Web_CD-Platform\JS\PacMan Exercise-Proyect\youtube solution\vanilla-js-pacman-master\js-pacman-START-HERE\node_modules\deasync\build\deasync.vcxproj]
+npm ERR!
+npm ERR!
+npm ERR!
+npm ERR! FileTracker : error FTK1011: could not create the new file tracking log file: C:\Users\Matias\Desktop\CODING-DOJO\WebFundamentals Level\Fundamentos de la Web_CD-Platform\JS\PacMan Exercise-Proyect\youtube solution\vanilla-js-pacman-master\js-pacman-START-HERE\node_modules\deasync\build\Release\obj\deasync\deasync.tlog\link-rc.write.1.tlog. The system cannot find the path specified. [C:\Users\Matias\Desktop\CODING-DOJO\WebFundamentals Level\Fundamentos de la Web_CD-Platform\JS\PacMan Exercise-Proyect\youtube solution\vanilla-js-pacman-master\js-pacman-START-HERE\node_modules\deasync\build\deasync.vcxproj]
+npm ERR!
+npm ERR!
+npm ERR!
+npm ERR! FileTracker : error FTK1011: could not create the new file tracking log file: C:\Users\Matias\Desktop\CODING-DOJO\WebFundamentals Level\Fundamentos de la Web_CD-Platform\JS\PacMan Exercise-Proyect\youtube solution\vanilla-js-pacman-master\js-pacman-START-HERE\node_modules\deasync\build\Release\obj\deasync\deasync.tlog\link-cvtres.read.1.tlog. The system cannot find the path specified. [C:\Users\Matias\Desktop\CODING-DOJO\WebFundamentals Level\Fundamentos de la Web_CD-Platform\JS\PacMan Exercise-Proyect\youtube solution\vanilla-js-pacman-master\js-pacman-START-HERE\node_modules\deasync\build\deasync.vcxproj]
+npm ERR!
+npm ERR!
+npm ERR!
+npm ERR! FileTracker : error FTK1011: could not create the new file tracking log file: C:\Users\Matias\Desktop\CODING-DOJO\WebFundamentals Level\Fundamentos de la Web_CD-Platform\JS\PacMan Exercise-Proyect\youtube solution\vanilla-js-pacman-master\js-pacman-START-HERE\node_modules\deasync\build\Release\obj\deasync\deasync.tlog\link-cvtres.write.1.tlog. The system cannot find the path specified. [C:\Users\Matias\Desktop\CODING-DOJO\WebFundamentals Level\Fundamentos de la Web_CD-Platform\JS\PacMan Exercise-Proyect\youtube solution\vanilla-js-pacman-master\js-pacman-START-HERE\node_modules\deasync\build\deasync.vcxproj]
+npm ERR! gyp info it worked if it ends with ok
+npm ERR! gyp info using node-gyp@7.1.2
+npm ERR! gyp info using node@16.5.0 | win32 | x64
+npm ERR! gyp info find Python using Python version 3.8.8 found at "C:\Users\Matias\anaconda3\python.exe"
+npm ERR! gyp info find VS using VS2019 (16.10.31515.178) found at:
+npm ERR! gyp info find VS "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools"
+npm ERR! gyp info find VS run with --verbose for detailed information
+npm ERR! (node:12408) [DEP0150] DeprecationWarning: Setting process.config is deprecated. In the future the property will be read-only.
+npm ERR! (Use `node --trace-deprecation ...` to show where the warning was created)
+npm ERR! gyp info spawn C:\Users\Matias\anaconda3\python.exe
+npm ERR! gyp info spawn args [
+npm ERR! gyp info spawn args   'C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\node-gyp\\gyp\\gyp_main.py',
+npm ERR! gyp info spawn args   'binding.gyp',
+npm ERR! gyp info spawn args   '-f',
+npm ERR! gyp info spawn args   'msvs',
+npm ERR! gyp info spawn args   '-I',
+npm ERR! gyp info spawn args   'C:\\Users\\Matias\\Desktop\\CODING-DOJO\\WebFundamentals Level\\Fundamentos de la Web_CD-Platform\\JS\\PacMan Exercise-Proyect\\youtube solution\\vanilla-js-pacman-master\\js-pacman-START-HERE\\node_modules\\deasync\\build\\config.gypi',
+npm ERR! gyp info spawn args   '-I',
+npm ERR! gyp info spawn args   'C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\node-gyp\\addon.gypi',
+npm ERR! gyp info spawn args   '-I',
+npm ERR! gyp info spawn args   'C:\\Users\\Matias\\AppData\\Local\\node-gyp\\Cache\\16.5.0\\include\\node\\common.gypi',
+npm ERR! gyp info spawn args   '-Dlibrary=shared_library',
+npm ERR! gyp info spawn args   '-Dvisibility=default',
+npm ERR! gyp info spawn args   '-Dnode_root_dir=C:\\Users\\Matias\\AppData\\Local\\node-gyp\\Cache\\16.5.0',
+npm ERR! gyp info spawn args   '-Dnode_gyp_dir=C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\node-gyp',
+npm ERR! gyp info spawn args   '-Dnode_lib_file=C:\\\\Users\\\\Matias\\\\AppData\\\\Local\\\\node-gyp\\\\Cache\\\\16.5.0\\\\<(target_arch)\\\\node.lib',
+npm ERR! gyp info spawn args   '-Dmodule_root_dir=C:\\Users\\Matias\\Desktop\\CODING-DOJO\\WebFundamentals Level\\Fundamentos de la Web_CD-Platform\\JS\\PacMan Exercise-Proyect\\youtube solution\\vanilla-js-pacman-master\\js-pacman-START-HERE\\node_modules\\deasync',
+npm ERR! gyp info spawn args   '-Dnode_engine=v8',
+npm ERR! gyp info spawn args   '--depth=.',
+npm ERR! gyp info spawn args   '--no-parallel',
+npm ERR! gyp info spawn args   '--generator-output',
+npm ERR! gyp info spawn args   'C:\\Users\\Matias\\Desktop\\CODING-DOJO\\WebFundamentals Level\\Fundamentos de la Web_CD-Platform\\JS\\PacMan Exercise-Proyect\\youtube solution\\vanilla-js-pacman-master\\js-pacman-START-HERE\\node_modules\\deasync\\build',
+npm ERR! gyp info spawn args   '-Goutput_dir=.'
+npm ERR! gyp info spawn args ]
+npm ERR! gyp info spawn C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\MSBuild\Current\Bin\MSBuild.exe
+npm ERR! gyp info spawn args [
+npm ERR! gyp info spawn args   'build/binding.sln',
+npm ERR! gyp info spawn args   '/clp:Verbosity=minimal',
+npm ERR! gyp info spawn args   '/nologo',
+npm ERR! gyp info spawn args   '/p:Configuration=Release;Platform=x64'
+npm ERR! gyp info spawn args ]
+npm ERR! gyp ERR! build error
+npm ERR! gyp ERR! stack Error: `C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\MSBuild\Current\Bin\MSBuild.exe` failed with exit code: 1
+npm ERR! gyp ERR! stack     at ChildProcess.onExit (C:\Program Files\nodejs\node_modules\npm\node_modules\node-gyp\lib\build.js:194:23)
+npm ERR! gyp ERR! stack     at ChildProcess.emit (node:events:394:28)
+npm ERR! gyp ERR! stack     at Process.ChildProcess._handle.onexit (node:internal/child_process:290:12)
+npm ERR! gyp ERR! System Windows_NT 10.0.19043
+npm ERR! gyp ERR! command "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\node_modules\\node-gyp\\bin\\node-gyp.js" "rebuild"
+npm ERR! gyp ERR! cwd C:\Users\Matias\Desktop\CODING-DOJO\WebFundamentals Level\Fundamentos de la Web_CD-Platform\JS\PacMan Exercise-Proyect\youtube solution\vanilla-js-pacman-master\js-pacman-START-HERE\node_modules\deasync
+npm ERR! gyp ERR! node -v v16.5.0
+npm ERR! gyp ERR! node-gyp -v v7.1.2
+npm ERR! gyp ERR! not ok
+npm ERR! Build failed
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\Matias\AppData\Local\npm-cache\_logs\2021-10-25T19_13_41_416Z-debug.log

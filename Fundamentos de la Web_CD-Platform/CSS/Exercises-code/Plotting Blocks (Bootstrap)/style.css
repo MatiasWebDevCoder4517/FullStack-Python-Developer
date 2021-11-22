@@ -1,0 +1,45 @@
+* {
+    outline: 1px dotted red;
+
+}
+
+.navbar {
+    padding: 70px;
+    margin-bottom: 20px;
+}
+
+.row1 {
+    margin-left: 20px;
+    display: inline-block;
+    width: 500px;
+}
+
+.row2 {
+    margin-left: 20px;
+    display: inline-block;
+    width: 1373px;
+}
+
+.aside-title {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.main-title {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.row3 {
+    height: 65px;
+    background-color: green;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.footer-title {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}

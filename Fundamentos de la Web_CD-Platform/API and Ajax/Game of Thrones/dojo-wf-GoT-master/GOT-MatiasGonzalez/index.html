@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GoT Houses</title>
+	<link rel="icon" href="icon.png">
+	<link rel="stylesheet" href="style.css">
+	<link href='https://fonts.googleapis.com/css?family=Cinzel Decorative' rel='stylesheet'>
+	<link href='https://fonts.googleapis.com/css?family=Della Respira' rel='stylesheet'>
+	<script type="text/javascript">
+	</script>
+	<script type="text/javascript" 
+			src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script> 
+	<script type="text/javascript"
+	 		src="houses.js"></script>
+	<script type="text/javascript">
+	
+		$(document).ready(function(){
+
+			console.log(allHouses);
+			console.log('page loaded');
+			var houses = [
+				{'name': "House Stark of Winterfell", 
+				  'img': 'stark.jpg'},
+				{'name': "House Targaryen of King's Landing", 
+				  'img': 'targaryen.jpg'},
+				{'name': "House Lannister of Casterly Rock", 
+				  'img': 'lannister.jpg'},
+				{'name': "House Baratheon of Storm's End", 	
+				  'img': 'baratheon.png'},
+			];
+
+			
+			for(var i=0; i<houses.length; i++){
+				houses[i].id = allHouses[houses[i].name];
+				$('header').append('<div class="img-wrapper"><img selected=false src="img/'+houses[i].img+'"></div>');
+
+				$('header').children('.img-wrapper').children('img').last().data({'id': houses[i].id})
+			}
+			console.log(houses);
+
+			$('header img').on('load', function(){
+				var imgwidth = parseInt($(this).css('width'), 10);
+				var imgWrapperWidth = parseInt($('header .img-wrapper').css('width'), 10);
+				console.log(imgwidth, imgWrapperWidth);
+				// move it to the left to center it
+				if(imgwidth > imgWrapperWidth){
+					var left = (imgwidth - imgWrapperWidth)/2;
+					console.log(left);
+				}
+				$(this).css('left', '-'+left+'px');
+				$(this).fadeTo(200,1);
+			})
+
+			$('header img').on('mouseover', 
+				function(){
+					$(this).fadeTo(100, .6)
+					if(!$(this).attr('selected')){
+						$('#details *').fadeTo(100, 0);
+					}
+				})
+			$('header img').on('mouseout',
+				function(){
+					$(this).fadeTo(200, 1)
+					$('#details *').fadeTo(100, 1);
+				}
+			)
+			function gotSuccess(res){
+				//console.log(res);
+				$('#name').text(res.name);
+				$('#words').html(res.words);
+				titles = res.titles.join(', ');
+				$('#titles').text(titles);
+				$('#details *').fadeTo(500,1);
+			}
+			var endpoint = 'https://www.anapioficeandfire.com/api/houses/';
+			$(document).on('click', 'header img', function(){
+				var id = $(this).data('id');
+				$('header img').attr('selected', false);
+				$(this).attr('selected', true);
+				var link = endpoint + id;
+				/*if($('#details').css('height')=='0px'){
+					$('#details').animate('height', '100px');
+				}*/
+				$.getJSON(link, gotSuccess);
+				
+			})
+
+		})
+	</script>
+</head>
+
+<body>
+	<header>
+		
+	</header>
+	<main>
+		<div id="details">
+			<h1 id="name"></h1>
+			<p id=titles></p>
+			<p id="words"></p>
+		</div>
+	</main>
+</body>
+
+</html>

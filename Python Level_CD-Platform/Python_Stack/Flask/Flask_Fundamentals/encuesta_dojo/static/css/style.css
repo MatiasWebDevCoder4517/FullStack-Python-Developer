@@ -1,0 +1,15 @@
+.title {
+    text-align: center;
+}
+
+.container {
+    background-color: lightgrey;
+    padding: 20px;
+    height: 500px;
+}
+
+.sub_container {
+    background-color: lightgrey;
+    font-size: 40px;
+    text-align: center;
+}

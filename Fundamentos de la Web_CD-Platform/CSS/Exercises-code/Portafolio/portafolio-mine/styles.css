@@ -1,0 +1,138 @@
+/** {
+  outline: 1px dotted red;
+}
+*/
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: black;
+}
+
+.nav-container {
+  background-color: lightgray;
+  margin-right: auto;
+  padding: 10px;
+}
+
+.nav-title1 {
+  display: inline;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  margin-right: 40%; /* hack to get the caption to be on the right*/
+  vertical-align: middle;
+  position: relative;
+  bottom: 4px;
+}
+
+.nav-title2 {
+  font-size: 25px;
+  display: inline;
+  padding-right: 15px;
+  text-align: right;
+  vertical-align: bottom;
+  position: relative;
+  bottom: 10px;
+  margin: 0px 0px 0px 500px;
+}
+
+.jayne-photo {
+  width: 700px;
+  margin: 40px 30px 30px 50px;
+  border: 5px solid silver;
+}
+
+.about-container {
+  background-color: white;
+  display: inline-block;
+  margin: -505px 30px 30px 800px;
+  display: grid;
+  padding: 0 0 20px 0;
+}
+
+.about-title {
+  background-color: grey;
+  padding: 12px;
+  color: #fafcfa;
+  font-family: sans-serif;
+  margin: 0px;
+  font-size: 30px;
+}
+
+.about-p {
+  font-size: 28.5px;
+  margin: 20px;
+  font-family: sans-serif;
+}
+
+.about-container a {
+  color: black;
+  font-family: sans-serif;
+}
+
+#content {
+  margin: 20px;
+}
+
+.box.panel {
+  width: 292px;
+  display: inline-block;
+  background: linear-gradient(to left, #dbcdda, #fefdfe);
+}
+.box.panel:not(:last-child) {
+  margin-right: 21px;
+}
+.box.panel p {
+  font-size: 90%;
+  text-align: justify;
+}
+.box.panel.project {
+  height: 350px;
+}
+.box.panel.tech {
+  height: 200px;
+  display: block;
+  text-align: left;
+  /*padding: 10px;*/
+}
+.box.panel.project img {
+  width: 80%;
+}
+.box.panel.tech img {
+  width: 40px;
+  display: inline-block;
+  margin-left: 12px; /*10px 6px 0px 12px;*/
+  margin-top: 8px;
+}
+.box.panel.tech form {
+  text-align: center;
+  padding-top: 10px;
+}
+.box.panel.tech input[type="submit"] {
+  color: #e8fbfe;
+  background-color: #407d61;
+  border: 2px black solid;
+  padding: 0.25em;
+  font-weight: bold;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px 1px silver;
+}
+
+.flat-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.flat-list li {
+  display: inline;
+}
+
+.footer ul li img {
+  width: 20px;
+  vertical-align: middle;
+  margin: 4px;
+}
+.footer a {
+  color: black;
+  font-style: italic;
+  font-family: sans-serif;
+}

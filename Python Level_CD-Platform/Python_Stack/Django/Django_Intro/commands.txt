@@ -1,0 +1,9 @@
+CreateProject:          django-admin startproject 'name_project'
+CreateApp:               python manage.py startapp 'name_app'
+Migrations:               python manage.py migrate  
+                                python manage.py makemigrations
+GoToPythonShell:     python manage.py shell
+
+
+
+

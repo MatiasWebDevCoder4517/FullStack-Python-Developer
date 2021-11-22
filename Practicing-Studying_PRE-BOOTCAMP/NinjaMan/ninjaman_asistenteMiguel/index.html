@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        /* background: green; */
+        /* margin-bottom: 100px; */
+        padding-bottom: 20px;
+        height: 30px;
+      }
+      #game-container {
+        /* margin-top: 100px; */
+        /* background: yellow; */
+        /* width: 100%; */
+        /* width: 500px;
+            height: 500px; */
+      }
+      .game-block {
+        display: inline-block;
+        /* width: calc(100%/ 5.2);
+            height: 100%; */
+        width: 50px;
+        height: 50px;
+      }
+      .row {
+        width: 100%;
+        height: calc(100% / 5);
+        /* background: rgb(57, 68, 11); */
+      }
+      .wall {
+        background: rgb(50, 73, 205);
+      }
+      .blank {
+        background: #000;
+      }
+      .sushi {
+        background-image: url("./ninjaman/sushi.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      .onigiri {
+        background-image: url("./ninjaman/onigiri.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      #ninjaman {
+        position: absolute;
+        /* top: 50px;
+            left: 50px; */
+        height: 50px;
+        width: 50px;
+        background-image: url("./ninjaman/ninja.gif");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      #pinky {
+        position: absolute;
+        height: 50px;
+        width: 50px;
+
+        background-image: url("./ninjaman/pinky.gif");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      #bluey {
+        position: absolute;
+        height: 50px;
+        width: 50px;
+
+        background-image: url("./ninjaman/bluey.gif");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      #pumpky {
+        position: absolute;
+        height: 50px;
+        width: 50px;
+
+        background-image: url("./ninjaman/pumpky.gif");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      #red {
+        position: absolute;
+        height: 50px;
+        width: 50px;
+
+        background-image: url("./ninjaman/red.gif");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>PACMAN GAME</h1>
+    <div id="game-container"></div>
+    <div id="ninjaman"></div>
+    <p id="score">score: 0</p>
+    <p id="lives">lives: 3</p>
+    <div id="bluey"></div>
+    <div id="pinky"></div>
+    <div id="red"></div>
+    <div id="pumpky"></div>
+    <script>
+      let lives = 3;
+      let score = 0;
+      let ninja_loc = {
+        x: 1,
+        y: 1,
+      };
+      let class_names = [
+        "wall", // [0]
+        "blank", // [1]
+        "sushi", // [2],
+        "onigiri", // [3]
+      ];
+
+      let map = generateMap();
+      function generateMap() {
+        let map = [];
+        height = Math.floor(Math.random() * (20 - 4) + 4);
+        width = Math.floor(Math.random() * (20 - 4) + 4);
+
+        for (let i = 0; i < height; i++) {
+          let temp_map = [];
+          for (let j = 0; j < width; j++) {
+            if (i == 0 || j == width - 1 || i == height - 1 || j == 0)
+              temp_map[j] = 0;
+            else temp_map[j] = Math.floor(Math.random() * (4 - 0) + 0);
+          }
+          map[i] = temp_map;
+        }
+        return map;
+      }
+      let ghost_loc = generateGhostLocations();
+
+      function generateGhostLocations() {
+        let ghosts_loc = [];
+        for (let i = 0; i < 4; i++) {
+          ghosts_loc[i] = {
+            x: Math.floor(Math.random() * (map[0].length - 0) + 0),
+            y: Math.floor(Math.random() * (map.length - 0) + 0),
+          };
+        }
+        return ghosts_loc;
+      }
+      function drawGhosts() {
+        let pinky = document.getElementById("pinky");
+        let bluey = document.getElementById("bluey");
+        let pumpky = document.getElementById("pumpky");
+        let red = document.getElementById("red");
+
+        pinky.style.top = 50 + ghost_loc[0].y * 50 + "px";
+        pinky.style.left = ghost_loc[0].x * 50 + "px";
+
+        bluey.style.top = 50 + ghost_loc[1].y * 50 + "px";
+        bluey.style.left = ghost_loc[1].x * 50 + "px";
+
+        pumpky.style.top = 50 + ghost_loc[2].y * 50 + "px";
+        pumpky.style.left = ghost_loc[2].x * 50 + "px";
+
+        red.style.top = 50 + ghost_loc[3].y * 50 + "px";
+        red.style.left = ghost_loc[3].x * 50 + "px";
+      }
+
+      function moveGhost(index) {
+        console.log("moving pinky");
+        direction = Math.floor(Math.random() * (40 - 37) + 37);
+
+        if (direction == 37) {
+          if (ghost_loc[index].x - 1 !== 0) {
+            ghost_loc[index].x -= 1;
+          }
+        }
+        // top
+        if (direction == 38) {
+          if (ghost_loc[index].y - 1 !== 0) {
+            ghost_loc[index].y -= 1;
+          }
+        }
+        // right
+        if (direction == 39) {
+          if (ghost_loc[index].x + 1 !== map[0].length) {
+            ghost_loc[index].x += 1;
+          }
+        }
+        // bottom
+        if (direction == 40) {
+          if (ghost_loc[index].y + 1 !== map.length) {
+            ghost_loc[index].y += 1;
+          }
+        }
+        drawGhosts();
+      }
+
+      function checkIfDead() {
+        if (ninja_loc.x == ghost_loc[0].x && ninja_loc.y == ghost_loc[0].y) {
+          return true;
+        }
+        if (ninja_loc.x == ghost_loc[1].x && ninja_loc.y == ghost_loc[1].y) {
+          return true;
+        }
+        if (ninja_loc.x == ghost_loc[2].x && ninja_loc.y == ghost_loc[2].y) {
+          return true;
+        }
+        if (ninja_loc.x == ghost_loc[3].x && ninja_loc.y == ghost_loc[3].y) {
+          return true;
+        }
+      }
+      // responsible for drawing the map
+      function drawMap() {
+        let gameCnt = document.getElementById("game-container");
+        let output = "";
+        for (let i = 0; i < map.length; i++) {
+          output += '<div class="row">';
+          for (let j = 0; j < map[i].length; j++) {
+            let temp_index = map[i][j];
+            output += `<div class="game-block ${class_names[temp_index]}"></div>`;
+          }
+          output += "</div>";
+        }
+        gameCnt.innerHTML = output;
+      }
+
+      // (Basic) Keep track of how many sushis NinjaMan eats.
+      function updateScore() {
+        document.getElementById("score").innerHTML = `score: ${score}`;
+      }
+      // (Basic) Add Onigiri as an alternative food for NinjaMan.
+      // (Intermediate) Let a random world be generated when the page loads.
+      // (Advanced) Add Ghosts that chase NinjaMan.
+      // (Advanced) Give NinjaMan 3 lives when Game Over appears, when a ghost touches NinjaMan 3 times.
+      function drawNinja() {
+        let ninja = document.getElementById("ninjaman");
+        ninja.style.top = 50 + ninja_loc.y * 50 + "px";
+        ninja.style.left = ninja_loc.x * 50 + "px";
+      }
+
+      document.onkeydown = function (e) {
+        // left
+        if (e.keyCode == 37) {
+          if (map[ninja_loc.y][ninja_loc.x - 1] !== 0) {
+            if (map[ninja_loc.y][ninja_loc.x - 1] == 2) score++;
+            updateScore();
+            ninja_loc.x -= 1;
+          }
+        }
+        // top
+        if (e.keyCode == 38) {
+          if (map[ninja_loc.y - 1][ninja_loc.x] !== 0) {
+            if (map[ninja_loc.y - 1][ninja_loc.x] == 2) score++;
+            updateScore();
+            ninja_loc.y -= 1;
+          }
+        }
+        // right
+        if (e.keyCode == 39) {
+          if (map[ninja_loc.y][ninja_loc.x + 1] !== 0) {
+            if (map[ninja_loc.y][ninja_loc.x + 1] == 2) score++;
+            updateScore();
+            ninja_loc.x += 1;
+          }
+        }
+        // bottom
+        if (e.keyCode == 40) {
+          if (map[ninja_loc.y + 1][ninja_loc.x] !== 0) {
+            if (map[ninja_loc.y + 1][ninja_loc.x] == 2) score++;
+            updateScore();
+            ninja_loc.y += 1;
+          }
+        }
+
+        map[ninja_loc.y][ninja_loc.x] = 1;
+        drawNinja();
+        drawMap();
+      };
+      generateGhostLocations();
+      drawGhosts();
+      drawNinja();
+      generateMap();
+      drawMap();
+
+      setInterval(function () {
+        for (let i = 0; i < 4; i++) {
+          moveGhost(i);
+          if (checkIfDead()) {
+            alert("you died");
+            let lives_ref = document.getElementById("lives");
+            lives--;
+
+            if (lives == 0) {
+              alert("game over.. starting over");
+              lives = 3;
+            }
+            lives_ref.innerHTML = `lives: ${lives}`;
+            ninja_loc = { x: 1, y: 1 };
+            drawNinja();
+            ghost_loc = generateGhostLocations();
+            drawGhosts();
+
+            map = generateMap();
+            drawMap();
+          }
+        }
+      }, 1000);
+    </script>
+  </body>
+</html>

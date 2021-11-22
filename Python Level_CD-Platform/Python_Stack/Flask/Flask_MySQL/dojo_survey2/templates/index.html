@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dojo_Survey2 Flask</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/style.css')}}"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Survey</h1>
+      <form action="/create" method="post">
+        {% with errors = get_flashed_messages(category_filter=["nameError"]) %}
+        {% if errors %}
+        <div class="error">
+          {%- for msg in errors %}
+          <p>{{ msg }}</p>
+          {% endfor -%}
+        </div>
+        {% endif %} {% endwith %}
+        <label for="name">Your Name:</label>
+        <input type="text" name="name" /><br />
+        <label for="location">Dojo location:</label>
+        <select name="location">
+          {% for i in option_list %}
+          <option name="{{ i }}">{{ i }}</option>
+          {% endfor %}
+        </select>
+        <br />
+        <label for="language">Favorite Language:</label>
+        <select name="language">
+          {% for j in language_list %}
+          <option name="{{ j }}">{{ j }}</option>
+          {% endfor %}
+        </select>
+        <br />
+        {% with errors = get_flashed_messages(category_filter=["commentError"])
+        %} {% if errors %}
+        <div class="error">
+          {%- for msg in errors %}
+          <p>{{ msg }}</p>
+          {% endfor -%}
+        </div>
+        {% endif %} {% endwith %}
+        <label for="comment">Comment:</label>
+        <textarea rows="4" cols="50" name="comment"></textarea> <br />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>

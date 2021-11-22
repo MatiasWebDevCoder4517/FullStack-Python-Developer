@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML-Table_ Flask</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <!-- <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='css/style.css')}}"
+    /> -->
+    <style>
+      #container {
+        width: 1350px;
+        margin: 50px auto;
+        background-color: white;
+      }
+      body {
+        background-color: lightslategray;
+      }
+      h1 {
+        color: white;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Welcome to the HTML-TABLE</h1>
+
+    <div id="container">
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Full Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for name in persons%}
+          <tr>
+            <td>{{name['first_name']}}</td>
+            <td>{{name['last_name']}}</td>
+            <td>{{name['first_name']}} {{name['last_name']}}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

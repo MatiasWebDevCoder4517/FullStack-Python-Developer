@@ -1,0 +1,25 @@
+.images img {
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+}
+
+#res-btn {
+    margin-top: 30px;
+    width: 150px;
+    height: 60px;
+    background: rgb(0, 81, 255);
+    color: white;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+#res-btn2 {
+    margin-top: 30px;
+    width: 150px;
+    height: 60px;
+    background: rgb(6, 201, 80);
+    color: black;
+    font-weight: bold;
+    vertical-align: middle;
+}

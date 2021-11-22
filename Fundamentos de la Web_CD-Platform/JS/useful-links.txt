@@ -1,0 +1,6 @@
+https://www.w3schools.com/jsref/dom_obj_all.asp
+
+https://www.w3schools.com/jsref/dom_obj_document.asp
+
+https://medium.com/entendiendo-javascript/entendiendo-los-objetos-en-javascript-3a6d3a0695e5#.szr828uh9
+

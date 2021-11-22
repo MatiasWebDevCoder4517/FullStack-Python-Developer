@@ -1,0 +1,13 @@
+mysql -u root -p
+enter password: ********
+
+show databases;
+use gladiator_movie;
+
+SELECT * FROM users WHERE id > 2;
+
+INSERT INTO users VALUES ('maximus', 'decimus', 'meridius', 'gladiator');
+
+UPDATE users SET users.name = 'commodus' WHERE users.name = 'maximus';
+
+DELETE FROM users WHERE users.name = 'commodus';

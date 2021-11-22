@@ -1,0 +1,71 @@
+{% extends "layout.html" %} {% block body %}
+
+<div class="row">
+  <div class="col-md-5">
+    {% with messages = get_flashed_messages() %} {% if messages %} {% for
+    message in messages %}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      {{ message }}
+      <button
+        type="button"
+        class="close"
+        data-dismiss="alert"
+        aria-label="Close"
+      >
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    {% endfor %} {% endif %} {% endwith %}
+
+    <div class="card card-body">
+      <form action="{{url_for('add_grade')}}" method="POST">
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            name="idstudent"
+            placeholder="ID of the Student"
+          />
+        </div>
+
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            name="course"
+            placeholder="Course"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            name="grade"
+            placeholder="Grade"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="date"
+            class="form-control"
+            name="date"
+            placeholder="Grade Date"
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            name="comments"
+            placeholder="Comment Here"
+          />
+        </div>
+        <button class="btn btn-primary btn-block">
+          <p>Save Grade</p>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

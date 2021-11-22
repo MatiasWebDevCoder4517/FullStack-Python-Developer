@@ -1,0 +1,24 @@
+
+https://docs.python.org/3/library/stdtypes.html
+
+
+La siguiente es una lista de los métodos de cadena más utilizados:
+
+string.upper(): devuelve una copia de la cadena con todos los caracteres en mayúscula.
+
+string.lower(): devuelve una copia de la cadena con todos los caracteres en minúsculas.
+
+string.count(substring): devuelve el número de ocurrencias de subcadena en la cadena.
+
+string.split(char): devuelve una lista de valores donde la cadena se divide en el carácter dado. Sin un parámetro, la división predeterminada está en cada espacio.
+
+string.find(substring): devuelve el índice del inicio de la primera aparición de subcadena dentro de la cadena.
+
+string.isalnum(): devuelve booleano dependiendo de si la longitud de la cadena es len > 0 y todos los caracteres son alfanuméricos (solo letras y números). 
+Las cadenas que incluyen espacios y signos de puntuación devolverán False para este método. 
+Métodos similares incluyen .isalpha(), .isdigit(), .islower(), .isupper(), 
+y así sucesivamente. Todos regresan booleanos.
+
+string.join(list):  devuelve una cadena que es todas las cadenas dentro de nuestro conjunto (en este caso, una lista) concatenadas.
+
+string.endswith(substring): devuelve un valor booleano en función de si los últimos caracteres de la cadena coinciden con la subcadena.

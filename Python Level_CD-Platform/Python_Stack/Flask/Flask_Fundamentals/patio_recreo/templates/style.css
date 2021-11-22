@@ -1,0 +1,31 @@
+.container1 {
+    background: red;
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    padding: 100px;
+    text-align: center;
+    margin: 20px;
+
+}
+
+.container2 {
+    background: yellow;
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    padding: 100px;
+    text-align: center;
+    margin: 20px;
+}
+
+.container3 {
+    background: lightblue;
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    padding: 100px;
+    text-align: center;
+    margin: 20px;
+
+}

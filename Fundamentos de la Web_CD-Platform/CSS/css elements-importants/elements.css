@@ -1,0 +1,248 @@
+/* 
+
+width | height:
+
+Las propiedades width (ancho) y height (altura) son utilizadas para determinar el tamaño de tus elementos. 
+Los valores pueden ser expresados en pixeles (px) y porcentaje (%). Cuando se trabaja con contenido estático, 
+es recomendable utilizar px puesto que definirás tu página para que no cambie. Si trabajas con un diseño responsivo, es mejor utilizar %
+
+*/
+
+a {
+  width: 25px;
+}
+div {
+  width: 100%;
+  height: 200px;
+}
+img {
+  width: 250px;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+/* 
+
+overflow:
+Esta propiedad determina qué debe pasar cuando el contenido dentro de un contenedor es demasiado para el tamaño del contenedor. 
+Puedes configurar el contenedor para ocultar la información adicional que no cabe, 
+mostrar la información como sea o agregar una barra de desplazamiento (scroll bar) 
+con lo que el contenido podría ser visto pese a su tamaño. 
+
+*/
+
+div {
+  overflow: scroll;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+/* 
+
+background:
+La propiedad background (fondo) puede modificar el fondo de un elemento en una sola línea, 
+lo que es más sencillo que separar cada propiedad en su propia línea de código. 
+El color puede ser definido utilizando hex, rgb o código semántico (semantic code).
+
+*/
+
+p {
+  background: #ffffff url("cherries.png") no-repeat fixed center;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+/* 
+
+background-color | background-image | background-position | background-size | background-repeat:
+
+Estas propiedades ajustan el fondo de acuerdo a su tipo. 
+Como background, background-color puede ser definida utilizando hex, rgb o código semántico.
+
+*/
+
+p {
+  background-color: blue;
+}
+div {
+  background-image: url("cherries.png");
+  background-position: center;
+  background-size: auto;
+  background-repeat: no-repeat;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+/* 
+
+border:
+Esta propiedad ajusta todos los elementos de borde en una sola línea. Así, el primer valor es el grosor del borde. 
+El segundo valor es tipo de borde, mientras que el tercero es el color del borde. El color puede ser hex, rgb o código semántico.
+La propiedad border puede separarse en distintas líneas utilizando border-width, border-style y border color. 
+Además, puedes seleccionar específicamente qué borde modificar utilizando border-top (arriba), 
+border-bottom (abajo), border-right (a la derecha) y border-left (a la izquierda).
+
+*/
+
+button {
+  border: 2px dotted green;
+}
+div {
+  border: 1px solid #000000;
+}
+p {
+  border-right: 1px groove rgb(100, 100, 100);
+  border-left: 1px groove rgb(200, 200, 200);
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+/* 
+
+border-radius
+Esta propiedad permite dar una apariencia curva a las esquinas de tu borde. Los valores puede ser establecidos utilizando px o %.
+
+*/
+
+button {
+  border-radius: 5px;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+/* 
+
+color:
+El color de texto se especifica usando la propiedad de color. 
+El valor de la propiedad de color puede ser expresada utilizando hex, RGB o código semántico.
+
+*/
+
+p {
+  color: #ffffff;
+}
+a {
+  color: rgb(255, 255, 255);
+}
+span {
+  color: white;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+/* 
+
+text-align:
+Esta propiedad se utiliza para establecer la alineación horizontal de cualquier texto. 
+El texto puede estar centrado, alineado a la izquierda o a la derecha, o justificado. 
+Esta propiedad solo funcionará si también presenta un bloque.
+
+*/
+
+h1 {
+  text-align: center;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+/* 
+
+text-decoration:
+Es utilizada para agregar o remover underlines (subrayados), overlines (línea sobre) y line-throughs (tachado).
+
+*/
+
+a {
+  text-decoration: none;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+/* 
+
+font-family:
+La propiedad font-family especifica el estilo de fuente a ser usado por un elemento. Existen 2 tipos de nombres de font-family:
+
+named-family - Ejemplos: "times", "courier", "arial"
+generic-family - Ejemplos: "serif", "sans-serif", "cursive", "fantasy", "monospace"
+Fuentes Web-safe:
+
+Existen fuentes instaladas en casi todos los sistemas y se denominan web safe fonts (fuentes seguras para la web), 
+porque en general se verán igual independiente del sistema que tenga el usuario. 
+Algunas de ellas son: Verdana, Arial, Trebuchet MS, Times New Roman, Georgia, Andale Mono, Courier New, Comic Sans e Impact.
+
+**** Ten en cuenta que las fuentes con más de una palabra en su nombre deben ir entre comillas. ****
+
+*/
+
+p {
+  font-family: "helvetica neue", arial, verdana, sans-serif;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+/* 
+
+font-size:
+La propiedad font-size (tamaño de fuente) puede ser expresada en 4 unidades diferentes: 
+pt, px, em, %. Pt y px (punto y pixel) son consideradas dimensionamiento estático y no se ajustarán adecuadamente cuando se redimensione tu página.
+Em y % (medida responsiva y porcentaje) sí se ajustarán y, por ende,  son las recomendadas por los desarrolladores. 
+A continuación podrás ver un cuadro desplegable que muestra las equivalencias aproximadas entre las cuatro unidades.
+
+*/
+
+h3 {
+  font-size: 10pt;
+}
+p {
+  font-size: 14px;
+}
+a {
+  font-size: 1.2em;
+}
+span {
+  font-size: 80%;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+/* 
+
+font-style
+Esta propiedad controla la inclinación de la letra. 
+Algunos textos pueden tener la propiedad italic (cursiva) como parte de la fuente, por lo que seleccionarla sería simple. 
+Para las fuentes que no tienen el estilo italic, el valor oblique puede ser utilizado para imitar el texto en italic.
+
+*/
+
+span {
+  font-style: italic;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+/* 
+
+font-weight
+Esta propiedad define el grosor de una línea de caracteres. 
+normal es normalmente el valor por defecto. 
+Los valores pueden ser establecidos de forma numérica o semántica.
+
+*/
+
+p {
+  font-weight: bold;
+}
+span {
+  font-weight: 600;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------ */
+
+/* 
+
+
+
+*/
+
+/* ------------------------------------------------------------------------------------------------------------------------------------------------------ */

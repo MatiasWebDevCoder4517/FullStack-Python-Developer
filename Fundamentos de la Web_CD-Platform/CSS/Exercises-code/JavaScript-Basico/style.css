@@ -1,0 +1,55 @@
+/* 
+* {
+  margin: 0;
+  padding: 0;
+  
+} 
+*/
+
+a {
+  color: cyan;
+}
+body {
+  color: white;
+}
+span {
+  color: purple;
+}
+
+.main-container {
+  background-color: navy;
+  width: 970px;
+  margin-left: 500px;
+  padding: 20px;
+}
+
+.menu {
+  border-radius: 10px;
+  background-color: red;
+  color: white;
+  margin: 0 10px 15px 0;
+  padding: 1px 0 1px 10px;
+}
+
+.home {
+  border-radius: 10px;
+  width: 180px;
+  background-color: darkcyan;
+  padding: 10px 10px 10px 10px;
+}
+
+.JsBasic {
+  border-radius: 10px;
+  background-color: black;
+  width: 730px;
+  display: grid;
+  margin: -311px 5px 10px 220px;
+  padding: 10px 0px 30px 10px;
+}
+
+.footer {
+  border-radius: 10px;
+  background-color: gray;
+  padding: 10px 10px 10px 10px;
+  margin: 10px 0 0 0;
+}

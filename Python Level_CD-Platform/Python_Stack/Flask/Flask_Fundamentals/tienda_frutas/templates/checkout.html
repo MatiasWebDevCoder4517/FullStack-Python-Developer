@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- BOOTSTRAP -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/bootstrap.css') }}"
+    />
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <title>Tienda-Frutas_Flask</title>
+  </head>
+  <body>
+    <header>
+      <div class="navbar navbar-dark bg-dark box-shadow">
+        <div class="container d-flex justify-content-between">
+          <a href="#" class="navbar-brand d-flex align-items-center">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="mr-2"
+            >
+              <path
+                d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"
+              ></path>
+              <circle cx="12" cy="13" r="4"></circle>
+            </svg>
+            <strong>Tienda de Frutas CD</strong>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarHeader"
+            aria-controls="navbarHeader"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ######################################## -->
+    <main role="main">
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Thank you for your order!</h1>
+          <br />
+          <p class="lead">
+            Your order has been received and is being processed immediately!
+            Please notified us if exists any inconvenient
+          </p>
+          <hr class="my-4" />
+          <h3>Si te ha gustado este sitio web, por favor recomiendanos !</h3>
+          <br />
+          <a class="btn btn-info btn-lg" href="/" role="button"
+            >Regresar a Store</a
+          >
+        </div>
+      </section>
+
+      <div class="album py-5 bg-light">
+        <div class="container">
+          <h3 class="mb-3">Store Order for:</h3>
+          <hr class="mb-4 bg-dark" />
+          <h3>Name: {{firstname.upper()}} {{lastname.upper()}}</h3>
+          <h5>Blackberry: {{blackberries}}</h5>
+          <h5>Strawberries: {{strawberries}}</h5>
+          <h5>Raspberry: {{raspberries}}</h5>
+          <h5>Apples: {{apples}}</h5>
+          <h5 id="total">
+            TOTAL FRUTAS: {{blackberries + raspberries + strawberries + apples}}
+          </h5>
+          <a href="/fruits" class="btn btn-success my-2"
+            >See all Store Fruits</a
+          >
+          <br />
+          <br />
+          <h4 class="confirmation">
+            Credenciales de Estudiante son correctas!
+          </h4>
+          <h4 class="confirmation">
+            La compra fue realizada por el ID: {{studentid}}, nombre estudiante:
+            {{firstname.upper()}} {{lastname.upper()}} en el Dojo:
+            {{dojo.upper()}} a las
+          </h4>
+          <br />
+          <h3 class="confirmation">{{timestamp}}.</h3>
+          <hr class="mb-4 bg-dark" />
+          <a class="btn btn-primary btn-lg btn-block" href="/"
+            >Go Back to the Store</a
+          >
+        </div>
+      </div>
+    </main>
+  </body>
+  <!-- JS -->
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"
+  ></script>
+</html>

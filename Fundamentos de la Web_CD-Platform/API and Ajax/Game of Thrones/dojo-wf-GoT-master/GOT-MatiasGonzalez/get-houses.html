@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>API Id's</title>
+	
+	
+	<script type="text/javascript">
+	</script>
+	<script type="text/javascript" 
+			src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script> 
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var endpoint = 'https://www.anapioficeandfire.com/api/houses/'
+			N = 444; // found by trial and error
+			for(var i=1;i<=N;i++){
+				link = endpoint+i;
+				
+				$.ajax({
+					url: link,
+					success: function(res){
+						//console.log(res);
+						urlparts = res.url.split('/');
+						id = urlparts[urlparts.length-1];
+						$('body').append(
+							'"'+res.name+'":'+id+",<br>");
+						
+					},
+					dataType: 'json',
+					async: true, // turn this to false if you want them to be sorted
+					method: 'GET'
+				});
+
+			}
+
+		})
+
+	</script>
+
+</head>
+
+<body>
+	
+</body>
+</html>

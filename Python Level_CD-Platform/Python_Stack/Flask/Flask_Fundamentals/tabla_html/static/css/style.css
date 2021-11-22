@@ -1,0 +1,14 @@
+#container {
+    width: 1350px;
+    margin: 50px auto;
+    background-color: white;
+}
+
+body {
+    background-color: lightslategray;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
