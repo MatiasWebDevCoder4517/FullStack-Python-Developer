@@ -1,0 +1,77 @@
+python manage.py makemigrations 
+python manage.py migrate
+python manage.py shell
+
+In python shell:
+
+Book.objects.create(title='C#')  
+Book.objects.create(title='Java')      
+Book.objects.create(title='Python')
+Book.objects.create(title='Ruby')  
+Book.objects.create(title='PHP')      
+Author.objects.create(first_name='Jane', last_name='Austen') 
+Author.objects.create(first_name='Emily', last_name='Dickinson')  
+Author.objects.create(first_name='Fyodor', last_name='Dostoevksy')
+Author.objects.create(first_name='William', last_name='Shakespeare') 
+Author.objects.create(first_name='Lau', last_name='Tzu')
+change_book1 = Book.objects.get(id=1)
+change_book1.title = 'CSharp'
+change_book1.save()
+change_author1 = Author.objects.get(id=4)
+change_author1.first_name = 'Bill'
+change_author1.save()
+this_books = Book.objects.get(id=1)
+this_books = Book.objects.get(id=2)
+this_author1 = Author.objects.get(id=1)
+this_author1.books.add(this_books)
+this_books.authors.add(this_author1)
+this_author1.books.all()	
+this_books.authors.all()
+this_author1 = Author.objects.get(id=2) 
+this_books = Book.objects.get(id=1)     
+this_author1.books.add(this_books)
+this_author1 = Author.objects.get(id=2) 
+this_books = Book.objects.get(id=2)     
+this_author1.books.add(this_books)
+this_author1 = Author.objects.get(id=2) 
+this_books = Book.objects.get(id=3)     
+this_author1.books.add(this_books)
+this_author1 = Author.objects.get(id=3) 
+this_books = Book.objects.get(id=1)     
+this_author1.books.add(this_books)
+this_author1 = Author.objects.get(id=3) 
+this_books = Book.objects.get(id=2)     
+this_author1.books.add(this_books)
+this_author1 = Author.objects.get(id=3) 
+this_books = Book.objects.get(id=3)     
+this_author1.books.add(this_books)
+this_author1 = Author.objects.get(id=3) 
+this_books = Book.objects.get(id=4)     
+this_author1.books.add(this_books)
+this_author1 = Author.objects.get(id=4) 
+this_books = Book.objects.get(id=1)  
+this_author1.books.add(this_books)
+book3 = Book.objects.get(id=3)
+all_authors = Author.objects.filter(books=book3)
+delete_author1 = Book.objects.get(id=3)
+delete_author1 =  Author.objects.get(id=2)
+delete_author1.delete()
+Author.objects.create(first_name='J.R.R', last_name='Tolkien')
+Book.objects.create(title='The Lord Of The Rings')
+this_books = Book.objects.get(id=6)
+this_author1 = Author.objects.get(id=6)
+this_author1.books.add(this_books)
+author3 = Author.objects.get(id=3)
+all_books = Book.objects.filter(authors=author3)
+book5 = Book.objects.get(id=5)
+all_authors = Author.objects.filter(books=book5)
+
+
+
+
+
+
+
+
+  
+

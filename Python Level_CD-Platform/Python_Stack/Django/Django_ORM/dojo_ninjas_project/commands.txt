@@ -1,0 +1,53 @@
+python manage.py makemigrations 
+python manage.py migrate
+python manage.py shell
+
+
+In python shell(1):
+
+dojos.objects.create(name='Dojo1',city='SanFrancisco',state='CF')  
+dojos.objects.create(name='Dojo2',city='NewYork',state='NY')      
+dojos.objects.create(name='Dojo3',city='Oregon',state='OR')  
+delete_dojo1 = dojos.objects.get(id=1) 
+delete_dojo1.delete() 
+delete_dojo2 = dojos.objects.get(id=2) 
+delete_dojo2.delete() 
+delete_dojo3 = dojos.objects.get(id=3) 
+delete_dojo3.delete() 
+dojos.objects.create(name='Dojo1',city='SanFrancisco',state='CF')  
+dojos.objects.create(name='Dojo2',city='NewYork',state='NY')      
+dojos.objects.create(name='Dojo3',city='Oregon',state='OR')
+dojo1 = dojos.objects.get(id=4)
+ninjas.objects.create(dojos=dojo1, first_name='Conan', last_name='TheBarbarian') 
+ninjas.objects.create(dojos=dojo1, first_name='Kratos', last_name='TheGodOfWar')  
+ninjas.objects.create(dojos=dojo1, first_name='Ragnar', last_name='LothBrok')    
+dojo2 = dojos.objects.get(id=5)
+ninjas.objects.create(dojos=dojo2, first_name='Spartan1', last_name='Leonidas') 
+ninjas.objects.create(dojos=dojo2, first_name='Spartan2', last_name='Stelios')  
+ninjas.objects.create(dojos=dojo2, first_name='Spartan3', last_name='Alexios')
+dojo3 = dojos.objects.get(id=6)
+ninjas.objects.create(dojos=dojo3, first_name='Viking1', last_name='Bjorn') 
+ninjas.objects.create(dojos=dojo3, first_name='Viking2', last_name='Floki')  
+ninjas.objects.create(dojos=dojo3, first_name='Viking3', last_name='Ubbe')
+dojo1 = dojos.objects.get(id=4)
+all_ninjas = ninjas.objects.filter(dojos=dojo1)
+dojo3 = dojos.objects.get(id=6)
+all_ninjas = ninjas.objects.filter(dojos=dojo3)
+
+add new attribute to dojos 'desc':
+desc = models.TextField(default="Type a dojo description!")
+python manage.py makemigrations 
+python manage.py migrate
+python manage.py shell
+
+In python shell(2):
+dojos.objects.create(name='DOJOMAX', city='Oslo', state='OS', desc='hahahahahhahahahahahahahahhaha') 
+
+
+
+
+
+
+
+  
+

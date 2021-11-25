@@ -1,0 +1,9 @@
+{% extends "base.html" %} {% block body %}
+
+<h1>Random Word (attempt #{{count}})</h1>
+<div id="random">
+  <h1>{{word}}</h1>
+</div>
+<a href="/generate"><button id="genbutton">Generate random word</button></a>
+<a href="/reset"><button id="delbutton">Reset Count</button></a>
+{% endblock %}

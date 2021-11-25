@@ -1,0 +1,29 @@
+python manage.py makemigrations 
+python manage.py migrate
+python manage.py shell
+
+
+In python shell: 
+
+from users_app.models import users
+users.object.create(first_name='arnie', last_name='terminator', email_address='arnieTerminateThisShit@gmail.com', age=250)
+users.objects.create(first_name='T-800', last_name='terminator800', email_address='TerminateThisShitPlease@gmail.com', age=150) 
+users.objects.create(first_name='T-850', last_name='terminator850', email_address='FuckingMachine@gmail.com', age=300)
+users.objects.all()
+users.objects.last()
+users.objects.first()
+change_lastname = users.objects.get(id=3) 
+change_lastname.last_name = 'Pancakes'
+change_lastname.save()
+delete_user2 = users.objects.get(id=2)
+delete_user2.delete()
+
+In class users():
+
+def __repr__(self):
+	return "User FirstName: {}".format(self.first_name)
+
+
+
+
+ 

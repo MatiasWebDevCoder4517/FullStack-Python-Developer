@@ -4,6 +4,9 @@ Migrations:               python manage.py migrate
                                 python manage.py makemigrations
 GoToPythonShell:     python manage.py shell
 
+StartProject:  python manage.py runserver
+
+
 
 
 
