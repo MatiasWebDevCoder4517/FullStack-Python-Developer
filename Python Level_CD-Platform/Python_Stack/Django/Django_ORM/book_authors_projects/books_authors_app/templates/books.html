@@ -31,7 +31,7 @@
       <form action="/add_book" method="post">
         {% csrf_token %}
         <p>Title: <input type="text" name="title" /></p>
-        <p>Description: <textarea name="desc"></textarea></p>
+        <p>Description: <textarea name="notes"></textarea></p>
         <input type="submit" value="Add" />
       </form>
     </div>

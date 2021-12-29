@@ -1,0 +1,25 @@
+CODING DOJO WAY:
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql', # cambiar la base de datos a postgres
+        'NAME': 'first_postgres_db', # nombre de la base de datos, se creará en el servidor de Postgres a continuación
+        'USER': 'pkrull', # postgres para macOS o 'USER': 'postgres', para Windows
+        'PASSWORD': 'password', # contraseña a la que la cambió al instalar Postgres
+        'HOST': '127.0.0.1', # dirección IP localhost
+        'PORT': '5432', # puerto del servidor postgres predeterminado
+    }
+}
+
+MY WAY:
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'ilbyrxe',  # change everytime when create a new database ##
+        'USER': 'postgres',  # user for windows #
+        'PASSWORD': 'Matias',
+        'HOST': 'localhost',
+        'PORT': '',
+    }
+}

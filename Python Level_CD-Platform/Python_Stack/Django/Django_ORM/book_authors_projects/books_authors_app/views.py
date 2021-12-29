@@ -2,6 +2,8 @@ from django.shortcuts import render, redirect
 from .models import Author, Book
 
 # Books Functions
+
+
 def books(request):
     data = {
         "all_books": Book.objects.all()
@@ -10,9 +12,9 @@ def books(request):
 
 
 def add_book(request):
-    if request.POST['title'] and request.POST['desc']:
+    if request.POST['title']:
         Book.objects.create(
-            title=request.POST['title'], desc=request.POST['desc'])
+            title=request.POST['title'])
     return redirect("/")
 
 
@@ -36,6 +38,8 @@ def add_auth_to_book(request, book_id):
     return redirect("/books/"+book_id)
 
 # Authors Functions
+
+
 def authors(request):
     data = {
         "all_authors": Author.objects.all()

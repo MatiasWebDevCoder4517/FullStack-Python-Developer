@@ -1,0 +1,51 @@
+{% extends "base.html" %} {% block body %}
+
+<!-- ARREGLAR ORDEN/VISUALIZACION DE ERRORES !-->
+{% if messages %}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <ul class="messages">
+    {% for message in messages %}
+    <!-- {% if message.tags %} {{ message.tags}}
+    {%endif %} -->
+    <li>{{ message }}</li>
+  </ul>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+    {% endfor %}
+</div>
+{% endif %}
+
+<!-- EDIT THE COURSE -->
+<a class="btn btn-primary p-3" href="/">Go Back to Course List</a>
+
+<div>
+  <br />
+  <h2 align="center">Update Course</h2>
+  <br />
+  <form action="/edit/{{thisCourse.id}}" method="POST">
+    {% csrf_token %}
+    <h3>
+      <p><span class="text-light">Course Name:</span> {{ thisCourse.name }}</p>
+      <input
+        class="form-control bg-light"
+        type="text"
+        name="name"
+        placeholder="Type the New Course Name"
+      />
+    </h3>
+    <br />
+
+    <h3>
+      <p> <span class="text-light">Course Description:</span> {{ thisCourse.desc }} </p>
+      <textarea
+        class="form-control bg-light"
+        name="desc"
+        placeholder="Enter your New Description Here"></textarea>
+    </h3>
+    <br />
+    <input class="btn btn-success btn-lg" type="submit" value="Update Course" />
+  </form>
+</div>
+
+{% endblock %}

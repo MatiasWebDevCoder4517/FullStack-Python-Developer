@@ -1,0 +1,117 @@
+{% extends "base.html" %} {% block body %}
+
+<!-- ARREGLAR ORDEN/VISUALIZACION DE ERRORES !-->
+{% if messages %}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <ul class="messages">
+    {% for message in messages %}
+    <!-- {% if message.tags %} {{ message.tags}}
+    {%endif %} -->
+    <li>{{ message }}</li>
+  </ul>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+    {% endfor %}
+</div>
+{% endif %}
+
+<!-- ALL COURSE LIST (HOME) -->
+<div>
+  <h1>ALL COURSE LIST</h1>
+  <br />
+  <a class="btn btn-primary mr-md-3 mb-2 mb-md-0" href="/add_course"
+    >Add a New Course</a
+  >
+  <a class="btn btn-primary mr-md-3 mb-2 mb-md-0" href="/add_comments"
+    >Add a New Course Commentary</a
+  >
+  <br />
+  <br />
+  <h2>Courses</h2>
+
+  <table class="table table-striped table-bordered">
+    <thead class="thead-light">
+      <tr>
+        <td>ID</td>
+        <td>Course Name</td>
+        <td>Description of Course</td>
+        <td>Date Added</td>
+        <td>Last Course Update</td>
+        <td>Action 1</td>
+        <td>Action 2</td>
+        <td>Action 3</td>
+      </tr>
+    </thead>
+    <tbody>
+      {% for course in all_courses %}
+      <tr>
+        <td>{{ course.id }}</td>
+        <td>{{ course.name }}</td>
+        <td>{{ course.desc }}</td>
+        <td>{{ course.created_at }}</td>
+        <td>{{ course.updated_at }}</td>
+        <td>
+          <a class="btn btn-success" href="/course/{{ course.id }}"
+            >See Course</a
+          >
+        </td>
+        <td>
+          <a class="btn btn-warning" href="/edit/{{ course.id }}"
+            >Edit Course</a
+          >
+        </td>
+        <td>
+          <a class="btn btn-danger btn-delete1" href="/delete/{{ course.id }}"
+            >Delete Course</a
+          >
+        </td>
+      </tr>
+      {% endfor %}
+      <hr />
+    </tbody>
+  </table>
+</div>
+
+<div>
+  <h2>Courses Commentary</h2>
+  <table class="table table-striped table-bordered">
+    <thead class="thead-light">
+      <tr>
+        <td>ID Course</td>
+        <td>Course Commentary</td>
+        <td>Date Added</td>
+        <td>Last Commentary Update</td>
+        <td>Action 1</td>
+        <td>Action 2</td>
+      </tr>
+    </thead>
+    <tbody>
+      {% for description in all_descriptions %}
+      <tr>
+        <td>{{ description.course_desc_id }}</td>
+        <td>{{ description.comments }}</td>
+        <td>{{ description.created_at }}</td>
+        <td>{{ description.updated_at }}</td>
+
+        <td>
+          <a class="btn btn-warning" href="/edit/{{ description.id }}"
+            >Edit Commentary</a
+          >
+        </td>
+        <td>
+          <a
+            class="btn btn-danger btn-delete2"
+            href="/delete/{{ description.course_desc_id }}"
+            >Delete Commentary</a
+          >
+        </td>
+      </tr>
+
+      {% endfor %}
+      <hr />
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}
